@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <img id="bgImage" src="background.jpg" alt="background">
+
+    <!-- Heading -->
+    <h2 class="title">Check Weather Condition Instantly</h2>
+
+    <div class="main">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="getWeather">Get Weather</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        document.getElementById("getWeather").addEventListener("click", async () => {
+
+            const city = document.getElementById("cityInput").value.trim();
+            const output = document.getElementById("output");
+            const bgImage = document.getElementById("bgImage");
+
+            if (!city) {
+                output.innerText = "Please enter a city";
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://localhost:3000/weather?city=${city}`);
+                const data = await response.json();
+
+                if (data.error) {
+                    output.innerText = data.error;
+                    return;
+                }
+
+                output.innerHTML = `
+                    <p>Temperature: ${data.temperature} °C</p>
+                    <p>Condition: ${data.condition}</p>
+                    <p>Wind: ${data.wind} kph</p>
+                `;
+
+                const imageMap = {
+                    cold: "cold.jpg",
+                    cool: "cool.jpg",
+                    warm: "warm.jpg",
+                    hot: "hot.jpg",
+                    extreme: "extreme.jpg"
+                };
+
+                bgImage.src = imageMap[data.weatherType] || "background.jpg";
+
+            } catch (error) {
+                output.innerText = "Unable to connect to server";
+            }
+        });
+    </script>
+
+</body>
+</html>
