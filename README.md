@@ -15,23 +15,23 @@ Clean and user-friendly interface
 
 Frontend
 
-HTML
+  -HTML
 
-CSS
+  -CSS
 
-JavaScript
+  -JavaScript
 
 Backend
 
-Node.js
+  -Node.js
 
-Express.js
+  -Express.js
 
-WeatherAPI
+  -WeatherAPI
 
-dotenv (for environment variables)
+  -dotenv (for environment variables)
 
-CORS
+  -CORS
 
 🧠 Architecture Overview
 
