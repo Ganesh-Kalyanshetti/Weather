@@ -12,26 +12,16 @@ Real-time temperature, condition, and wind speed
 Clean and user-friendly interface
 
 🛠️ Tech Stack
-
 Frontend
-
-HTML
-
-CSS
-
-JavaScript
-
+  -HTML
+  -CSS
+  -JavaScript
 Backend
-
-Node.js
-
-Express.js
-
-WeatherAPI
-
-dotenv (for environment variables)
-
-CORS
+  -Node.js
+  -Express.js
+  -WeatherAPI
+  -dotenv (for environment variables)
+  -CORS
 
 🧠 Architecture Overview
 
