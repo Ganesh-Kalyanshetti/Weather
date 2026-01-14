@@ -1,6 +1,6 @@
 # 🌦️ Weather Forecasting Application
 
-## 🌦️ Know the weather before you step out.
+## Know the weather before you step out.
 
 A simple full-stack Weather Forecasting application that provides real-time weather information for any city.  
 Users can enter a city name and easily get the current weather report.
