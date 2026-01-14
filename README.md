@@ -1,4 +1,4 @@
-# 🌦️ Know the weather before you step out.
+## 🌦️ Know the weather before you step out.
 
 
 A simple full-stack Weather Forecasting application that provides real-time weather information for any city.  
